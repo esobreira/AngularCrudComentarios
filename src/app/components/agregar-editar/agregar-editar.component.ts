@@ -23,7 +23,7 @@ export class AgregarEditarComponent {
     private route: ActivatedRoute) {
 
     this.id = +this.route.snapshot.paramMap.get('id')!;
-    console.log(this.id);
+    //console.log(this.id);
 
     if (this.id > 0) {
       this.mode = 'edit';
@@ -44,7 +44,7 @@ export class AgregarEditarComponent {
     if (this.mode == 'edit') {
       this.texto_acao = 'Editar';
       this.service.getComentario(this.id).subscribe(data => {
-        console.log(data);
+        //console.log(data);
         this.agregarComentario.patchValue({
           titulo: data.titulo,
           criador: data.criador,
@@ -73,7 +73,7 @@ export class AgregarEditarComponent {
   }
 
   agregar() {
-    console.log(this.agregarComentario);
+    //console.log(this.agregarComentario);
 
     const comentario: Comentario = {
       titulo: this.agregarComentario.get('titulo')?.value,
@@ -87,7 +87,7 @@ export class AgregarEditarComponent {
         this.router.navigate(['/']);
       },
         error => {
-          console.log(error);
+          console.log('Erro ao incluir: ' + error);
         })
 
   }

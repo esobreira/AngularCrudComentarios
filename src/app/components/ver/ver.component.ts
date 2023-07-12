@@ -16,7 +16,7 @@ export class VerComponent {
 
   constructor(private route: ActivatedRoute, private service: ComentarioService) {
     this.id = +this.route.snapshot.paramMap.get('id')!;
-    console.log(this.id);
+    //console.log(this.id);
   }
 
 ngOnInit(): void {
@@ -27,7 +27,7 @@ ngOnInit(): void {
 
   getComentario() {
     this.service.getComentario(this.id).subscribe(data => {
-      console.log(data);
+      //console.log(data);
       this.comentario = data;
     })
   }

@@ -8,7 +8,8 @@ import { Comentario } from '../interfaces/comentario';
 })
 export class ComentarioService {
 
-  private myUrl = 'https://localhost:7230/';
+  //private myUrl = 'https://localhost:7230/';
+  private myUrl = 'https://becomentarios20230711203222.azurewebsites.net/';
   private myApi = 'api/comentario/';
 
   constructor(private http: HttpClient) { }
