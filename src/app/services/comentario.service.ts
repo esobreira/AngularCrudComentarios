@@ -9,7 +9,7 @@ import { Comentario } from '../interfaces/comentario';
 export class ComentarioService {
 
   //private myUrl = 'https://localhost:7230/';
-  private myUrl = 'https://becomentarios20230711203222.azurewebsites.net/';
+  private myUrl = 'https://becomentarios-docker-b7742658787a.herokuapp.com/';
   private myApi = 'api/comentario/';
 
   constructor(private http: HttpClient) { }
